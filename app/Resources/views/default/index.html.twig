@@ -1,40 +1,51 @@
 {% extends 'base.html.twig' %}
 {% block js %}
     {{ parent() }}
-
     <script>
-        $('document').on('click', '#btnDatosPersonales', function(){
-            console.log('Boton datosPersonales');
-            $('#datosPersonales').show();
+        document.title = 'Luis Sacha Arancibia Bazan';
+        var checkPersonales = false;
+        $(document).ready(function () {
+            //alert('Bienvenidos');
+        })
+        $(document).on('click', '#btnDatosPersonales', function(){
+            if(!checkPersonales){
+                $('#datosPersonales').show();
+                checkPersonales = true;
+            }else{
+                $('#datosPersonales').hide();
+                checkPersonales = false;
+            }
         })
     </script>
-{% endblock js %}
-
+{% endblock %}
 {% block body %}
-    <div id="wrapper">
+    <div id="wrapper" class="container-fluid">
         <div id="container">
             <div id="welcome">
-                <h1>Luis Sacha Arancibia Bazan</h1>
+                {#<h1>Luis Sacha Arancibia Bazan</h1>#}
             </div>
-
-            <div id="opciones">
-                <div class="">
-                    <button type="button" id="btnDatosPersonales" class="btn btn-lg btn-primary">Datos Personales</button>
-                    <button type="button" class="btn btn-lg btn-primary">Datos Académicos</button>
-                    <button type="button" class="btn btn-lg btn-primary">Experiencia Profesional</button>
-                    <button type="button" class="btn btn-lg btn-primary">Idiomas</button>
-                    <button type="button" class="btn btn-lg btn-primary">Contacto</button>
+            <div id="opciones" class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12">
+                    <button type="button" id="btnDatosPersonales" class="btn btn-lg btn-primary col-xs-12 col-md-2"><span class="glyphicons glyphicons-user"></span>Datos Personales</button>
+                    <button type="button" id="btnDatosAcademicos" class="btn btn-lg btn-primary col-xs-12 col-md-2">Datos Académicos</button>
+                    <button type="button" id="btnExperienciaProfesional" class="btn btn-lg btn-primary col-xs-12 col-md-2">Experiencia Profesional</button>
+                    <button type="button" id="btnIdiomas" class="btn btn-lg btn-primary col-xs-12 col-md-2">Idiomas</button>
+                    <button type="button" id="btnContacto" class="btn btn-lg btn-primary col-xs-12 col-md-2">Contacto</button>
                 </div>
             </div>
 
             <div id="datosPersonales" style="display: none;">
                 <div>Datos Personales</div>
                 <div>Nombre:</div>
+                <div>Apellidos:</div>
+                <div>Nombre:</div>
+                <div>Nombre:</div>
             </div>
-
         </div>
     </div>
 {% endblock %}
+
+
 
 {% block stylesheets %}
 <style>
@@ -45,7 +56,7 @@
     p { margin: 0 0 1em 0; }
     a { color: #0000F0; }
     a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
+    code { background: #F5F5F5;padding: 2px 6px; word-wrap: break-word; }
     #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
     #container { padding: 2em; }
     #welcome, #status { margin-bottom: 2em; }
@@ -54,7 +65,7 @@
     #icon-book { display: none; }
 
     @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
+        #wrapper { width: 100%; margin: 2em auto; }
         #icon-book { display: inline-block; }
         #status a, #next a { display: block; }
 
@@ -64,3 +75,4 @@
     }
 </style>
 {% endblock %}
+
