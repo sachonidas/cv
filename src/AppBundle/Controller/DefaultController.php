@@ -29,7 +29,7 @@ class DefaultController extends Controller
         ]);
     }
     /**
-     * @Route("/experiencia-profesional", name="formacionProfesional")
+     * @Route("/experiencia-profesional", name="experienciaProfesional")
      */
     public function experienciaProfesionalAction(Request $request)
     {
