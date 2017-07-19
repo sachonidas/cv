@@ -14,6 +14,55 @@
         {% endblock %}
     </head>
     <body>
+    {% block header %}
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- El logotipo y el icono que despliega el menú se agrupan
+                 para mostrarlos mejor en los dispositivos móviles -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('homepage') }}" style="color: #0000F0">LSAB</a>
+            </div>
+
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ path('datosPersonales')}}">Datos Personales</a></li>
+                    <li><a href="#">Datos Académicos</a></li>
+                    <li><a href="#">Experiencia Profesional </a></li>
+                    <li><a href="#">Idiomas</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Aplicaciones Publicadas<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">App 1</a></li>
+                            <li><a href="#">App 2</a></li>
+                            <li><a href="#">App 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+        {#<div id="opciones" class="col-md-12 col-xs-12">
+            <div class="col-md-12 col-xs-12">
+                <button type="button" id="btnDatosPersonales" onclick="window.location.href='{{ path('datosPersonales')}}'" class="btn btn-lg btn-primary col-xs-12 col-md-2"><span class="glyphicons glyphicons-user"></span>Datos Personales</button>
+                <button type="button" id="btnDatosAcademicos" class="btn btn-lg btn-primary col-xs-12 col-md-2">Datos Académicos</button>
+                <button type="button" id="btnExperienciaProfesional" class="btn btn-lg btn-primary col-xs-12 col-md-2">Experiencia Profesional</button>
+                <button type="button" id="btnIdiomas" class="btn btn-lg btn-primary col-xs-12 col-md-2">Idiomas</button>
+                <button type="button" id="btnContacto" class="btn btn-lg btn-primary col-xs-12 col-md-2">Contacto</button>
+            </div>
+        </div>#}
+    {% endblock %}
         {% block body %}
         {% endblock %}
         

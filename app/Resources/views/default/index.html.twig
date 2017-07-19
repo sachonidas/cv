@@ -7,15 +7,6 @@
         $(document).ready(function () {
             //alert('Bienvenidos');
         })
-        $(document).on('click', '#btnDatosPersonales', function(){
-            if(!checkPersonales){
-                $('#datosPersonales').show();
-                checkPersonales = true;
-            }else{
-                $('#datosPersonales').hide();
-                checkPersonales = false;
-            }
-        })
     </script>
 {% endblock %}
 {% block body %}
@@ -24,23 +15,7 @@
             <div id="welcome">
                 {#<h1>Luis Sacha Arancibia Bazan</h1>#}
             </div>
-            <div id="opciones" class="col-md-12 col-xs-12">
-                <div class="col-md-12 col-xs-12">
-                    <button type="button" id="btnDatosPersonales" class="btn btn-lg btn-primary col-xs-12 col-md-2"><span class="glyphicons glyphicons-user"></span>Datos Personales</button>
-                    <button type="button" id="btnDatosAcademicos" class="btn btn-lg btn-primary col-xs-12 col-md-2">Datos Académicos</button>
-                    <button type="button" id="btnExperienciaProfesional" class="btn btn-lg btn-primary col-xs-12 col-md-2">Experiencia Profesional</button>
-                    <button type="button" id="btnIdiomas" class="btn btn-lg btn-primary col-xs-12 col-md-2">Idiomas</button>
-                    <button type="button" id="btnContacto" class="btn btn-lg btn-primary col-xs-12 col-md-2">Contacto</button>
-                </div>
-            </div>
 
-            <div id="datosPersonales" style="display: none;">
-                <div>Datos Personales</div>
-                <div>Nombre:</div>
-                <div>Apellidos:</div>
-                <div>Nombre:</div>
-                <div>Nombre:</div>
-            </div>
         </div>
     </div>
 {% endblock %}
@@ -48,7 +23,7 @@
 
 
 {% block stylesheets %}
-<style>
+{#<style>
     body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
     h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
     h1 { font-size: 36px; }
@@ -73,6 +48,6 @@
         @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
     }
-</style>
+</style>#}s
 {% endblock %}
 
