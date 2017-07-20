@@ -2,10 +2,13 @@
 {% block js %}
     {{ parent() }}
     <script>
+        $(document).ready(function () {
+            alert();
+        })
         $(document).on('click','.mostrarMas', function () {
             $(this).find('.timeline-body').show('folder');
-            $(this).removeClass('fa-plus');
-            $(this).addClass('fa-minus');
+            $(this).removeClass('glyphicon-plus');
+            $(this).addClass('glyphicons-minus');
         })
     </script>
 {% endblock %}
@@ -16,14 +19,14 @@
         </div>
         <ul class="timeline">
             <li>
-                <div class="timeline-badge"><i class="fa fa-laptop"></i></div>
+                <div class="timeline-badge"><i class="glyphicon glyphicon-cloud"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4 class="timeline-title">IT</h4>
                         <p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> Desde el 21 de Diciembre 2015 hasta la actualidad</small></p>
-                        <p><span class="fa fa-plus mostrarMas"></span></p>
+                        <p><span class="glyphicon glyphicon-plus mostrarMas"></span></p>
                     </div>
-                    <div class="timeline-body" id="experienciaIt"  style="display: none">
+                    <div class="timeline-body pull-right" id="experienciaIt"  style="display: none">
                         <ul class="">
                             <li>
                                 <p>Desarrollo de aplicación web</p>

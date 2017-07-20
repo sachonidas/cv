@@ -3,12 +3,12 @@
     <head>
     <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css')}}">
         <meta charset="UTF-8" />
 
         <title>{% block title %}Yeeeeeeeeeeee!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css')}}">
         {% block js %}
             <script src="js/jquery-3.2.1.min.js"></script>
             <script src="bootstrap/js/bootstrap.js"></script>
@@ -55,8 +55,8 @@
         </nav>
 
     {% endblock %}
-        {% block body %}
-        {% endblock %}
-        
+    {% block body %}
+    {% endblock %}
+
     </body>
 </html>
